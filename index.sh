@@ -18,7 +18,7 @@ main () {
             word_end=$((len_of_word - word_start))
             echo -n ${word:${word_start}:${word_end}}
             printf ' %.0s' $( seq 1 $((count - len_of_word - 1 )) )
-            [[ $position -eq 0 ]] && sleep 1
+            [[ $position -eq 0 ]] && sleep 2
         elif [[ $position -ge $(( width - len_of_word ))  ]]; then
             word_start=0
             word_end=$((width - position))
